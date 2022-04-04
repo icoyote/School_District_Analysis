@@ -110,5 +110,25 @@ Per School Summary % | after NaN values |Updated percentages removing count for 
 
 Math and reading scores by grade, Scores by school spending, Scores by school size and Scores by school type had very small variations (at the centimal level sometimes) which didn't affect these sortings
 
+![](/Images/SideBySide_ReadByGrades.png)
 
+![](/Images/SideBySide_mathByGrades.png)
+
+in the side by side images of the printed results, the numbers have barely changed because NaN values do not get counted by the DataFrame .mean() methods
+
+
+Scores by school spending side by Side
+
+![](/Images/SideBySide_byBudget.png)
+
+Scores by school size side by side
+
+![](/Images/SideBySide_bySize.png)
+
+Scores by school type side by side
+
+![](/Images/SideBySide_byType.png)
+
+Such a small change in the results for the Thomas High School was possible because only 461 students were recorded for the 9th grade. 
+Thomas High Scool still had 1174 students with reading and math scores for  10th-12th graders.
 
