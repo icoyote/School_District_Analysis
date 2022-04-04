@@ -63,18 +63,52 @@ average math score | **78.9** | 79.0
 
 
  we do notice that by invalidating the grades for the 9th grade of Thomas High School the passing grade has a slighly lower value
+ The impact would have been greater if the grades were turned to 0 instead of NaN
 
 
 How is the school summary affected?
 
-How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
-How does replacing the ninth-grade scores affect the following:
-Math and reading scores by grade
-Scores by school spending
-Scores by school size
-Scores by school type
+In this section is where we can fully apprecaite the impact of invalidadting that set of 9th grade scoresfor the Thomas High School
 
-## Summary ##
+![](/Images/newPerSchoolSummary.png)
 
- Summarize four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs
+It is at this point that having changed the math and reading scores for the ninth graders that we can see a bigger impact.
+the calculation of the Thomas High School’s performance is still calculated with the total of all it's students however the NaN scores drove the percentages of passing students down.
+
+Per School Summary % | after NaN values | before NaN values
+------------- | ------------- | -------------
+% passing math | **66.9**  | 93.3
+% passing reading  | **69.7** | 97.3
+% overall passing | **65.1**| 90.6
+
+Relative to other schools the drop of the overall passing % dropped from 90.6% to 65.1% placing the Thomas High School from the top 2 spot to the second last in the botoom ranking.
+This is mainly due to still take into passing consideration all the students in the 9th grade, they do not pass the validation (because NaN is not greater than 70)
+
+```
+# Calculate the students who passed both math and reading.
+per_passing_math_reading = school_data_complete_df[(school_data_complete_df["math_score"] >= 70) 
+                                              & (school_data_complete_df["reading_score"] >= 70)]
+```
+
+
+For the remaining operations it was requested to identify the total number of students with NaN scores for the Thomas High School and re-calculate the percentage of students passing math, reading and both
+
+![](/Images/newStudentValues.png)
+
+461 students were counted for the 9th grade and once the calculations for the School Summary were adjusted, the Thomas High School recovered it's top2 position:
+
+![](/Images/newUpdatedPerSchoolSummary.png)
+
+Even without this correction the rest of the analysis sections were only affected by very small variations on their percentages, sometimes not even noticeable when the formatting was applied.
+
+Per School Summary % | after NaN values |Updated percentages removing count for 9th graders
+------------- | ------------- | -------------
+% passing math | 66.9  | **93.2**
+% passing reading  | 69.7 | **97.0**
+% overall passing | 65.1| **90.6**
+
+
+Math and reading scores by grade, Scores by school spending, Scores by school size and Scores by school type had very small variations (at the centimal level sometimes) which didn't affect these sortings
+
+
 
