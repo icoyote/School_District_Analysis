@@ -1,4 +1,4 @@
-# Election Results analysis with Python #
+# School District analysis with Python #
 
 ## Overview of the school district analysis: ##
 
@@ -9,34 +9,34 @@ During the review of the content of the files while applying data frame function
 Also by merging both files and we will obtain a high-level snapshot of the district's key metrics:
 
 - Total number of students
-totalStudentCount.png
+![](/Images/totalStudentCount.png)
 - Total number of schools
-totalSchoolsCount.png
+![](/Images/totalSchoolsCount.png)
 - Total budget
-totalBudget.png
+![](/Images/totalBudget.png)
 - Average math score & Average reading score
-averageScores.png
+![](/Images/averageScores.png)
 - Percentage of students who passed math & Percentage of students who passed reading
-percentagesMathReading.png
+![](/Images/percentagesMathReading.png)
 - Overall passing percentage
-overallPercentage.png
+![](/Images/overallPercentage.png)
 
 Resulting Dataframe District Summary
-districtSummary.png
+![](/Images/districtSummary.png)
 
 
 1. Top 5 and bottom 5 performing schools, based on the overall passing rate
-TopAndBottom.png
+![](/Images/TopAndBottom.png)
 2. The average math score received by students in each grade level at each school
-averageMathByGrade.png
+![](/Images/averageMathByGrade.png)
 3. The average reading score received by students in each grade level at each school
-averageReadByGrade.png
+![](/Images/averageReadByGrade.png)
 4. School performance based on the budget per student
-performanceBudget.png
+![](/Images/performanceBudget.png)
 5. School performance based on the school size 
-performanceSize.png
+![](/Images/performanceSize.png)
 6. School performance based on the type of school
-performanceType.png
+![](/Images/performanceType.png)
 
 ## Results: ##
 
